@@ -458,13 +458,13 @@
     }
     
     .social-links a {
-      color: #ddd;
+      color: #9ca3af;
       font-size: 1.5rem;
       transition: var(--transition);
     }
     
     .social-links a:hover {
-      color: var(--secondary);
+      color: var(--white);
     }
     
     /* Referral Link Styles */
@@ -472,69 +472,65 @@
       color: var(--primary);
       font-weight: 600;
       text-decoration: none;
-      border-bottom: 2px dotted var(--primary);
+      border-bottom: 1px solid var(--primary);
       transition: var(--transition);
     }
     
     .referral-link:hover {
-      color: var(--secondary);
-      border-bottom: 2px solid var(--secondary);
-    }
-    
-    /* New Header Layout for Desktop */
-    @media (min-width: 992px) {
-      .header-content {
-        display: grid;
-        grid-template-columns: 1fr 1.5fr; /* Give more space to the video */
-        gap: 50px;
-        align-items: center;
-        text-align: left;
-      }
-      .header-video-wrapper { margin: 0; }
+      color: #4338CA;
+      border-bottom-color: #4338CA;
     }
 
+    .shorts-cta {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 30px 20px;
+      background: var(--white);
+      border-radius: 15px;
+      margin: 10px 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    @keyframes pulse {
+      50% { opacity: 0.8; }
+    }
+    
     /* Responsive Design */
+    @media (min-width: 992px) {
+      .header-content {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
     @media (max-width: 768px) {
       header h1 {
         font-size: 2.2rem;
       }
-      
       header p {
         font-size: 1.1rem;
       }
-      
       .section-title h2 {
         font-size: 1.8rem;
       }
-      
-      .shorts-section, .about, .faq-section {
-        padding: 30px 20px;
-      }
-      
       .cta h2 {
         font-size: 2rem;
       }
-      
       .cta-button {
         padding: 15px 35px;
         font-size: 1.1rem;
       }
-      
     }
     
     @media (max-width: 480px) {
       header {
         padding: 60px 15px;
       }
-      
       header h1 {
         font-size: 1.8rem;
       }
-      
       section {
         padding: 60px 15px;
       }
-      
       .floating-cta {
         bottom: 10px;
         right: 10px;
@@ -553,41 +549,35 @@
   <!-- Header Section -->
   <header>
     <div class="header-content">
-      <div class="header-text">
-        <h1>Earn ₹50,000+/Month with Personal Mentorship</h1>
+      <div class="header-text-content">
+        <h1>Earn ₹50,000+ Per Month with Personal Mentorship</h1>
         <p>Join 12,500+ students who are achieving financial freedom with LeadsArk. No experience needed.</p>
         <ul class="header-benefits">
-          <li><i class="fas fa-check-circle"></i> Personal 1-on-1 Guidance</li>
-          <li><i class="fas fa-check-circle"></i> Daily Payouts to Your Bank</li>
-          <li><i class="fas fa-check-circle"></i> Work 2 Hours/Day From Your Phone</li>
+          <li><i class="fa-solid fa-check"></i> Personal 1-on-1 Guidance</li>
+          <li><i class="fa-solid fa-check"></i> Daily Payouts to Your Bank</li>
+          <li><i class="fa-solid fa-check"></i> Work 2 Hours/Day From Your Phone</li>
         </ul>
         <div class="header-cta-buttons">
           <button class="cta-button" onclick="window.location.href='join.html'">
             <i class="fas fa-rocket"></i> Start Earning Now
           </button>
-          <a href="https://chat.whatsapp.com/BrtDgNJW9FVHjPdyVzTFTU?mode=wwt" class="whatsapp-link-header">
+          <a href="https://chat.whatsapp.com/BrtDgNJW9FVHjPdyVzTFTU?mode=wwt" target="_blank" class="whatsapp-link-header">
             <i class="fab fa-whatsapp"></i> Join Group
           </a>
         </div>
       </div>
       <div class="header-video-wrapper">
-        <iframe loading="lazy" src="https://www.youtube.com/embed/oPF_VcyFI5s?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen  width="600px" height="337.5px"></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/oPF_VcyFI5s?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen width="460px" height="300px" ></iframe>
       </div>
     </div>
   </header>
 
   <!-- Video Shorts Section -->
-  <section class="shorts-section">
+  <section class="shorts-section" id="stories">
     <div class="section-title">
       <h2>Watch My Success Story</h2>
       <p>See how I and thousands of others transformed our lives with affiliate marketing</p>
     </div>
-    
-    <div class="shorts-intro">
-      <p>These short videos will show you exactly what's possible with the right training and guidance. Each video addresses a specific aspect of the LeadsArk system.</p>
-      <p><strong>Pro Tip:</strong> Watch all videos to understand the complete picture before joining!</p>
-    </div>
-    
     <div class="shorts-container">
       <!-- Short 1 -->
       <div class="short-card">
@@ -715,91 +705,70 @@
         </div>
       </div>
     </div>
-    
-    <div class="cta" style="margin-top: 50px;">
-      <div class="cta-content">
-        <h2>Ready to Create Your Success Story?</h2>
-        <p>Join now and get personal guidance from me to fast-track your results</p>
-        <button class="cta-button" onclick="window.location.href='join.html'">
-          <i class="fas fa-user-plus"></i> Join My Team Now
-        </button>
-        <p style="margin-top: 20px; font-size: 0.9rem;">Limited spots available for personal mentorship</p>
-      </div>
-    </div>
   </section>
 
   <!-- About Section -->
-  <section class="about">
+  <section class="about" id="about">
     <div class="section-title">
       <h2>Why Choose LeadsArk?</h2>
     </div>
-    
     <div class="about-content">
       <div class="about-text">
         <h3>India's #1 Affiliate Marketing Training Platform</h3>
         <p>LeadsArk isn't just another online course - it's a complete ecosystem designed to take you from complete beginner to successful affiliate marketer in the shortest time possible.</p>
-        
         <p>When you join through my <a href="join.html" class="referral-link">referral link</a>, you'll get:</p>
-        
         <ul class="benefits-list">
-          <li><strong>Personal mentorship from me</strong> - I'll guide you personally</li>
-          <li><strong>Proven income strategies</strong> - That actually work in the Indian market</li>
-          <li><strong>Step-by-step training</strong> - No confusion, just follow the process</li>
-          <li><strong>Active community support</strong> - 24/7 help from successful members</li>
-          <li><strong>Income from day one</strong> - Start earning from your first week</li>
-          <li><strong>Flexible time commitment</strong> - Work 2-4 hours daily from anywhere</li>
+          <li><i class="fa-solid fa-check"></i> <strong>Personal mentorship from me</strong> - I'll guide you personally</li>
+          <li><i class="fa-solid fa-check"></i> <strong>Proven income strategies</strong> - That actually work in the Indian market</li>
+          <li><i class="fa-solid fa-check"></i> <strong>Step-by-step training</strong> - No confusion, just follow the process</li>
+          <li><i class="fa-solid fa-check"></i> <strong>Active community support</strong> - 24/7 help from successful members</li>
+          <li><i class="fa-solid fa-check"></i> <strong>Income from day one</strong> - Start earning from your first week</li>
+          <li><i class="fa-solid fa-check"></i> <strong>Flexible time commitment</strong> - Work 2-4 hours daily from anywhere</li>
         </ul>
-        
         <p style="margin-top: 20px;"><strong>Special Bonus:</strong> When you join through my link, I'll give you my personal "Fast-Start Checklist" that helped me earn ₹25,000 in my first month!</p>
-        
         <button class="cta-button" onclick="window.location.href='join.html'" style="margin-top: 25px;">
           <i class="fas fa-gift"></i> Get My Bonus + Join Now
         </button>
       </div>
-      
       <div class="features">
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-rupee-sign"></i>
           </div>
           <h4>Low Investment</h4>
-          <p>Start with less than ₹1000 - recover it in your first week</p>
+          <p>Start with a small amount and recover it in your first week.</p>
         </div>
-        
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-mobile-alt"></i>
           </div>
           <h4>Work From Phone</h4>
-          <p>No laptop needed - everything can be done from smartphone</p>
+          <p>No laptop needed. Everything can be done from your smartphone.</p>
         </div>
-        
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-chart-line"></i>
           </div>
           <h4>Proven Results</h4>
-          <p>12,500+ students have transformed their income</p>
+          <p>12,500+ students have transformed their income with our system.</p>
         </div>
-        
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-hand-holding-usd"></i>
           </div>
           <h4>Daily Payouts</h4>
-          <p>Get paid every day directly to your bank account</p>
+          <p>Get paid every day directly to your bank account. No waiting.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Testimonials Section -->
-  <section class="testimonials">
+  <section class="testimonials" id="testimonials">
     <div class="section-title">
       <h2>Real People, Real Results</h2>
       <p>Here's what people who joined through my referral are saying</p>
     </div>
-    
     <div class="testimonial-grid">
       <div class="testimonial-card">
         <div class="testimonial-text">
@@ -807,58 +776,44 @@
         </div>
         <div class="testimonial-author">
           <div class="author-avatar">AK</div>
-          <div>
+          <div class="author-info">
             <h4>Ankit Kumar</h4>
             <p>Earns ₹45,000/month</p>
           </div>
         </div>
       </div>
-      
       <div class="testimonial-card">
         <div class="testimonial-text">
           "As a college student, I needed flexible income. Joined LeadsArk and within 2 months I was making more than my friends with jobs. The best decision I ever made!"
         </div>
         <div class="testimonial-author">
           <div class="author-avatar">PS</div>
-          <div>
+          <div class="author-info">
             <h4>Priya Sharma</h4>
             <p>Earns ₹32,000/month</p>
           </div>
         </div>
       </div>
-      
       <div class="testimonial-card">
         <div class="testimonial-text">
           "I tried many online money-making methods before, but LeadsArk actually worked. The community support is amazing. Crossed ₹50,000 last month working just 2-3 hours daily."
         </div>
         <div class="testimonial-author">
           <div class="author-avatar">RS</div>
-          <div>
+          <div class="author-info">
             <h4>Rahul Singh</h4>
             <p>Earns ₹68,000/month</p>
           </div>
         </div>
       </div>
     </div>
-    
-    <div class="cta" style="margin-top: 50px;">
-      <div class="cta-content">
-        <h2>Your Success Story Starts Here</h2>
-        <p>Join now and I'll personally help you create your first income stream in the next 7 days</p>
-        <button class="cta-button" onclick="window.location.href='join.html'">
-          <i class="fas fa-bolt"></i> Start in 5 Minutes
-        </button>
-        <p style="margin-top: 20px; font-size: 0.9rem;">30-day money-back guarantee • Beginner-friendly • 24/7 Support</p>
-      </div>
-    </div>
   </section>
 
   <!-- FAQ Section -->
-  <section class="faq-section">
+  <section class="faq-section" id="faq">
     <div class="section-title">
       <h2>Frequently Asked Questions</h2>
     </div>
-    
     <div class="faq-container">
       <div class="faq-item">
         <div class="faq-question">
@@ -869,7 +824,6 @@
           You can start with just 1-2 hours daily. As you get comfortable, you might want to invest more time to scale your earnings. Many of our students work 2-4 hours daily and earn ₹30,000-₹80,000 per month.
         </div>
       </div>
-      
       <div class="faq-item">
         <div class="faq-question">
           Do I need any prior experience or technical skills?
@@ -879,7 +833,6 @@
           Absolutely not! LeadsArk is designed for complete beginners. We provide step-by-step training that anyone can follow. If you can use WhatsApp and browse the internet, you can do this.
         </div>
       </div>
-      
       <div class="faq-item">
         <div class="faq-question">
           How soon can I start earning?
@@ -889,7 +842,6 @@
           Most students make their first commission within 3-7 days of joining. With our proven strategies, you can expect to earn your first ₹5,000-₹10,000 within your first 2 weeks if you follow the training.
         </div>
       </div>
-      
       <div class="faq-item">
         <div class="faq-question">
           What makes your guidance different?
@@ -899,7 +851,6 @@
           When you join through my <a href="join.html" class="referral-link">referral link</a>, you get personal mentorship from me. I'll share the exact strategies that helped me go from zero to ₹1.5 lakh/month, answer your questions directly, and help you avoid common mistakes that slow down progress.
         </div>
       </div>
-      
       <div class="faq-item">
         <div class="faq-question">
           Is there any money-back guarantee?
@@ -910,21 +861,10 @@
         </div>
       </div>
     </div>
-    
-    <div class="cta" style="margin-top: 50px;">
-      <div class="cta-content">
-        <h2>Still Have Questions?</h2>
-        <p>Join our WhatsApp group to get your questions answered by the community and me.</p>
-        <button class="cta-button" onclick="window.location.href='https://chat.whatsapp.com/BrtDgNJW9FVHjPdyVzTFTU?mode=wwt'">
-          <i class="fab fa-whatsapp"></i> Join WhatsApp Group
-        </button>
-        <p style="margin-top: 20px; font-size: 0.9rem;">Get instant support from me and other members!</p>
-      </div>
-    </div>
   </section>
 
   <!-- Final CTA Section -->
-  <section>
+  <section style="padding-top: 0;">
     <div class="cta">
       <div class="cta-content">
         <h2>Don't Just Dream About Financial Freedom - Create It!</h2>
@@ -943,14 +883,12 @@
     <div class="footer-content">
       <h3>LeadsArk Success Guide by Abhishek Kumar</h3>
       <p>Your personal guide to affiliate marketing success</p>
-      
       <div class="social-links">
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-telegram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
       </div>
-      
       <p>© 2025 Abhishek Kumar | All Rights Reserved</p>
       <p style="margin-top: 10px; font-size: 0.8rem;">
         <a href="join.html" style="color: #ddd; text-decoration: underline;">Join LeadsArk through my referral</a> to get personal mentorship
