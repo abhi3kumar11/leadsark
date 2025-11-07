@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LeadsArk | Start Earning ₹50,000+/Month with Affiliate Marketing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #5b86e5;
+      --secondary: #36d1dc;
+      --accent: #ff6b6b;
+      --dark: #222;
+      --light: #f9f9f9;
+      --white: #ffffff;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    /* Header Styles */
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white);
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+      background-size: cover;
+      background-position: bottom;
+    }
+    
+    .header-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      font-weight: 800;
+    }
+    
+    header p {
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+      font-weight: 300;
+    }
+    
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      margin-top: 10px;
+      backdrop-filter: blur(5px);
+    }
+    
+    /* Section Styles */
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+    }
+    
+    .section-title h2 {
+      font-size: 2.2rem;
+      display: inline-block;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    
+    .section-title h2::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      border-radius: 2px;
+    }
+    
+    /* Video Shorts Section */
+    .shorts-section {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 50px;
+      box-shadow: var(--shadow);
+    }
+    
+    .shorts-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+    
+    .shorts-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+    
+    .short-card {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: var(--transition);
+      background: var(--light);
+    }
+    
+    .short-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    
+    .short-video {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+    
+    .short-caption {
+      padding: 15px;
+    }
+    
+    .short-caption h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    
+    /* About Section */
+    .about {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 50px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    
+    .about-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      align-items: center;
+    }
+    
+    .about-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+    
+    .benefits-list {
+      list-style: none;
+      margin-top: 25px;
+    }
+    
+    .benefits-list li {
+      margin-bottom: 15px;
+      padding-left: 30px;
+      position: relative;
+    }
+    
+    .benefits-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--secondary);
+      font-weight: bold;
+    }
+    
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    
+    .feature-card {
+      background: var(--light);
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+    
+    .feature-card h4 {
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+    
+    /* CTA Section */
+    .cta {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white);
+      border-radius: 20px;
+      margin-top: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+      background-size: cover;
+      background-position: bottom;
+    }
+    
+    .cta-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    
+    .cta p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cta-button {
+      background: var(--white);
+      color: var(--primary);
+      border: none;
+      padding: 18px 45px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      background: var(--light);
+    }
+    
+    /* Floating CTA */
+    .floating-cta {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: white;
+      padding: 15px 25px;
+      border-radius: 50px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .floating-cta:hover {
+      transform: scale(1.05);
+      background: #ff5252;
+    }
+    
+    /* Testimonials */
+    .testimonials {
+      margin-top: 80px;
+    }
+    
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .testimonial-card {
+      background: var(--white);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    
+    .testimonial-card::before {
+      content: """;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-size: 4rem;
+      color: var(--secondary);
+      opacity: 0.2;
+      font-family: Georgia, serif;
+    }
+    
+    .testimonial-text {
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+    }
+    
+    /* FAQ Section */
+    .faq-section {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 50px;
+      box-shadow: var(--shadow);
+      margin-top: 80px;
+    }
+    
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .faq-item {
+      margin-bottom: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    .faq-question {
+      background: var(--light);
+      padding: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    
+    .faq-item.active .faq-answer {
+      padding: 20px;
+      max-height: 500px;
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: #ddd;
+      text-align: center;
+      padding: 50px 20px;
+      margin-top: 80px;
+    }
+    
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    .social-links a {
+      color: #ddd;
+      font-size: 1.5rem;
+      transition: var(--transition);
+    }
+    
+    .social-links a:hover {
+      color: var(--secondary);
+    }
+    
+    /* Referral Link Styles */
+    .referral-link {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px dotted var(--primary);
+      transition: var(--transition);
+    }
+    
+    .referral-link:hover {
+      color: var(--secondary);
+      border-bottom: 2px solid var(--secondary);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      
+      header p {
+        font-size: 1.1rem;
+      }
+      
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+      
+      .shorts-section, .about, .faq-section {
+        padding: 30px 20px;
+      }
+      
+      .cta h2 {
+        font-size: 2rem;
+      }
+      
+      .cta-button {
+        padding: 15px 35px;
+        font-size: 1.1rem;
+      }
+      
+      .short-video {
+        height: 400px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      header {
+        padding: 60px 15px;
+      }
+      
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      section {
+        padding: 60px 15px;
+      }
+      
+      .short-video {
+        height: 300px;
+      }
+      
+      .floating-cta {
+        bottom: 10px;
+        right: 10px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating CTA -->
+  <div class="floating-cta" onclick="window.location.href='new_leadsark_page.html'">
+    <i class="fas fa-rocket"></i> Start Earning Now
+  </div>
+
+  <!-- Header Section -->
+  <header>
+    <div class="header-content">
+      <h1>Earn ₹50,000+/Month with Affiliate Marketing</h1>
+      <p>Learn the exact strategies I used to go from zero to earning ₹1.5 lakh/month with LeadsArk</p>
+      <div class="badge">
+        <i class="fas fa-star"></i> Join 12,500+ Successful Students
+      </div>
+      <button class="cta-button" onclick="window.location.href='new_leadsark_page.html'" style="margin-top: 30px;">
+        <i class="fas fa-lock-open"></i> Get Instant Access Now
+      </button>
+    </div>
+  </header>
+
+  <!-- Video Shorts Section -->
+  <section class="shorts-section">
+    <div class="section-title">
+      <h2>Watch My Success Story</h2>
+      <p>See how I and thousands of others transformed our lives with affiliate marketing</p>
+    </div>
+    
+    <div class="shorts-intro">
+      <p>These short videos will show you exactly what's possible with the right training and guidance. Each video addresses a specific aspect of the LeadsArk system.</p>
+      <p><strong>Pro Tip:</strong> Watch all videos to understand the complete picture before joining!</p>
+    </div>
+    
+    <div class="shorts-container">
+      <!-- Short 1 -->
+      <div class="short-card">
+        <iframe class="short-video" src="https://www.youtube.com/embed/NQFTxDZCdRc" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="short-caption">
+          <h3>My First ₹10,000 in 7 Days</h3>
+          <p>How I made my first commission with zero experience</p>
+        </div>
+      </div>
+      
+      <!-- Short 2 -->
+      <div class="short-card">
+        <iframe class="short-video" src="https://www.youtube.com/embed/wl-OCyJ4rXE" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="short-caption">
+          <h3>Scaling to ₹50,000/Month</h3>
+          <p>The exact strategy I used to scale my earnings</p>
+        </div>
+      </div>
+      
+      <!-- Short 3 -->
+      <div class="short-card">
+        <iframe class="short-video" src="https://www.youtube.com/embed/A7p7it5EhW4" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="short-caption">
+          <h3>No Technical Skills Needed</h3>
+          <p>How beginners can start without any special knowledge</p>
+        </div>
+      </div>
+      
+      <!-- Short 4 -->
+      <div class="short-card">
+        <iframe class="short-video" src="https://www.youtube.com/embed/TGJeN3x6KTI" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="short-caption">
+          <h3>Working Just 2 Hours/Day</h3>
+          <p>How to earn consistently with minimal time investment</p>
+        </div>
+      </div>
+      
+      <!-- Short 5 -->
+      <div class="short-card">
+        <iframe class="short-video" src="https://www.youtube.com/embed/cK2QSAU7FHc" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="short-caption">
+          <h3>From Employee to Entrepreneur</h3>
+          <p>My journey from 9-5 job to financial freedom</p>
+        </div>
+      </div>
+      
+      <!-- Short 6 -->
+      <div class="short-card">
+        <iframe class="short-video" src="https://www.youtube.com/embed/HnXcZrYLXgE" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="short-caption">
+          <h3>Student Success Stories</h3>
+          <p>Real results from people who joined my team</p>
+        </div>
+      </div>
+      
+      <!-- Short 7 -->
+      <div class="short-card">
+        <iframe class="short-video" src="https://www.youtube.com/embed/yOmXRMENlH0" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="short-caption">
+          <h3>₹1.5 Lakh/Month Breakthrough</h3>
+          <p>How I crossed the ₹1.5 lakh/month milestone</p>
+        </div>
+      </div>
+      
+      <!-- Short 8 -->
+      <div class="short-card">
+        <iframe class="short-video" src="https://www.youtube.com/embed/Vqod7XlLwZI" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="short-caption">
+          <h3>Zero to ₹25,000 in First Month</h3>
+          <p>A student's incredible first-month results</p>
+        </div>
+      </div>
+      
+      <!-- Short 9 -->
+      <div class="short-card">
+        <iframe class="short-video" src="https://www.youtube.com/embed/4aSpQr6SMvs" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="short-caption">
+          <h3>Daily Routine of a Top Earner</h3>
+          <p>My simple daily process for consistent results</p>
+        </div>
+      </div>
+      
+      <!-- Short 10 -->
+      <div class="short-card">
+        <iframe class="short-video" src="https://www.youtube.com/embed/BoufqBe3JlE" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="short-caption">
+          <h3>Common Mistakes to Avoid</h3>
+          <p>What I wish I knew when I started</p>
+        </div>
+      </div>
+      
+      <!-- Short 11 -->
+      <div class="short-card">
+        <iframe class="short-video" src="https://www.youtube.com/embed/bHzwrdtm-7w" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="short-caption">
+          <h3>Why LeadsArk Works</h3>
+          <p>The unique advantage of this system</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cta" style="margin-top: 50px;">
+      <div class="cta-content">
+        <h2>Ready to Create Your Success Story?</h2>
+        <p>Join now and get personal guidance from me to fast-track your results</p>
+        <button class="cta-button" onclick="window.location.href='new_leadsark_page.html'">
+          <i class="fas fa-user-plus"></i> Join My Team Now
+        </button>
+        <p style="margin-top: 20px; font-size: 0.9rem;">Limited spots available for personal mentorship</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="section-title">
+      <h2>Why Choose LeadsArk?</h2>
+    </div>
+    
+    <div class="about-content">
+      <div class="about-text">
+        <h3>India's #1 Affiliate Marketing Training Platform</h3>
+        <p>LeadsArk isn't just another online course - it's a complete ecosystem designed to take you from complete beginner to successful affiliate marketer in the shortest time possible.</p>
+        
+        <p>When you join through my <a href="new_leadsark_page.html" class="referral-link">referral link</a>, you'll get:</p>
+        
+        <ul class="benefits-list">
+          <li><strong>Personal mentorship from me</strong> - I'll guide you personally</li>
+          <li><strong>Proven income strategies</strong> - That actually work in the Indian market</li>
+          <li><strong>Step-by-step training</strong> - No confusion, just follow the process</li>
+          <li><strong>Active community support</strong> - 24/7 help from successful members</li>
+          <li><strong>Income from day one</strong> - Start earning from your first week</li>
+          <li><strong>Flexible time commitment</strong> - Work 2-4 hours daily from anywhere</li>
+        </ul>
+        
+        <p style="margin-top: 20px;"><strong>Special Bonus:</strong> When you join through my link, I'll give you my personal "Fast-Start Checklist" that helped me earn ₹25,000 in my first month!</p>
+        
+        <button class="cta-button" onclick="window.location.href='new_leadsark_page.html'" style="margin-top: 25px;">
+          <i class="fas fa-gift"></i> Get My Bonus + Join Now
+        </button>
+      </div>
+      
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-rupee-sign"></i>
+          </div>
+          <h4>Low Investment</h4>
+          <p>Start with less than ₹1000 - recover it in your first week</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h4>Work From Phone</h4>
+          <p>No laptop needed - everything can be done from smartphone</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h4>Proven Results</h4>
+          <p>12,500+ students have transformed their income</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-hand-holding-usd"></i>
+          </div>
+          <h4>Daily Payouts</h4>
+          <p>Get paid every day directly to your bank account</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="section-title">
+      <h2>Real People, Real Results</h2>
+      <p>Here's what people who joined through my referral are saying</p>
+    </div>
+    
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-text">
+          "I was completely new to online earning. Joined through Abhishek's referral and he guided me personally. Made ₹18,500 in my first month itself! Now I'm consistently earning ₹45,000+ monthly."
+        </div>
+        <div class="testimonial-author">
+          <div class="author-avatar">AK</div>
+          <div>
+            <h4>Ankit Kumar</h4>
+            <p>Earns ₹45,000/month</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-text">
+          "As a college student, I needed flexible income. Joined LeadsArk and within 2 months I was making more than my friends with jobs. The best decision I ever made!"
+        </div>
+        <div class="testimonial-author">
+          <div class="author-avatar">PS</div>
+          <div>
+            <h4>Priya Sharma</h4>
+            <p>Earns ₹32,000/month</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-text">
+          "I tried many online money-making methods before, but LeadsArk actually worked. The community support is amazing. Crossed ₹50,000 last month working just 2-3 hours daily."
+        </div>
+        <div class="testimonial-author">
+          <div class="author-avatar">RS</div>
+          <div>
+            <h4>Rahul Singh</h4>
+            <p>Earns ₹68,000/month</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cta" style="margin-top: 50px;">
+      <div class="cta-content">
+        <h2>Your Success Story Starts Here</h2>
+        <p>Join now and I'll personally help you create your first income stream in the next 7 days</p>
+        <button class="cta-button" onclick="window.location.href='new_leadsark_page.html'">
+          <i class="fas fa-bolt"></i> Start in 5 Minutes
+        </button>
+        <p style="margin-top: 20px; font-size: 0.9rem;">30-day money-back guarantee • Beginner-friendly • 24/7 Support</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="section-title">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          How much time do I need to invest daily?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          You can start with just 1-2 hours daily. As you get comfortable, you might want to invest more time to scale your earnings. Many of our students work 2-4 hours daily and earn ₹30,000-₹80,000 per month.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          Do I need any prior experience or technical skills?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Absolutely not! LeadsArk is designed for complete beginners. We provide step-by-step training that anyone can follow. If you can use WhatsApp and browse the internet, you can do this.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          How soon can I start earning?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Most students make their first commission within 3-7 days of joining. With our proven strategies, you can expect to earn your first ₹5,000-₹10,000 within your first 2 weeks if you follow the training.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          What makes your guidance different?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          When you join through my <a href="new_leadsark_page.html" class="referral-link">referral link</a>, you get personal mentorship from me. I'll share the exact strategies that helped me go from zero to ₹1.5 lakh/month, answer your questions directly, and help you avoid common mistakes that slow down progress.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          Is there any money-back guarantee?
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          Yes! LeadsArk offers a 30-day money-back guarantee. If you follow the training for 30 days and don't see results, you can request a full refund - no questions asked.
+        </div>
+      </div>
+    </div>
+    
+    <div class="cta" style="margin-top: 50px;">
+      <div class="cta-content">
+        <h2>Still Have Questions?</h2>
+        <p>Join our WhatsApp group to get your questions answered by the community and me.</p>
+        <button class="cta-button" onclick="window.location.href='https://chat.whatsapp.com/BrtDgNJW9FVHjPdyVzTFTU?mode=wwt'">
+          <i class="fab fa-whatsapp"></i> Join WhatsApp Group
+        </button>
+        <p style="margin-top: 20px; font-size: 0.9rem;">Get instant support from me and other members!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section>
+    <div class="cta">
+      <div class="cta-content">
+        <h2>Don't Just Dream About Financial Freedom - Create It!</h2>
+        <p>Join 12,500+ students who have transformed their lives with LeadsArk. Your journey to ₹50,000+/month starts with one click.</p>
+        <button class="cta-button" onclick="window.location.href='new_leadsark_page.html'">
+          <i class="fas fa-lock-open"></i> Join LeadsArk Now
+        </button>
+        <p style="margin-top: 20px; font-size: 1rem;">
+          <strong>Special Offer:</strong> First 10 people to join today get my personal "Rapid Results" coaching session FREE!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <h3>LeadsArk Success Guide by Abhishek Kumar</h3>
+      <p>Your personal guide to affiliate marketing success</p>
+      
+      <div class="social-links">
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-telegram"></i></a>
+      </div>
+      
+      <p>© 2025 Abhishek Kumar | All Rights Reserved</p>
+      <p style="margin-top: 10px; font-size: 0.8rem;">
+        <a href="new_leadsark_page.html" style="color: #ddd; text-decoration: underline;">Join LeadsArk through my referral</a> to get personal mentorship
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ toggle functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentNode;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
