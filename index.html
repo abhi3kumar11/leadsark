@@ -36,7 +36,6 @@
     header {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: var(--white);
-      text-align: center;
       padding: 80px 20px;
       position: relative;
       overflow: hidden;
@@ -57,8 +56,9 @@
     .header-content {
       position: relative;
       z-index: 1;
-      max-width: 800px; /* Slightly reduced for better text flow */
+      max-width: 1200px;
       margin: 0 auto;
+      text-align: center;
     }
     
     header h1 {
@@ -468,6 +468,18 @@
       border-bottom: 2px solid var(--secondary);
     }
     
+    /* New Header Layout for Desktop */
+    @media (min-width: 992px) {
+      .header-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+        text-align: left;
+      }
+      .header-video-wrapper { margin: 0; }
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
       header h1 {
@@ -528,17 +540,19 @@
   <!-- Header Section -->
   <header>
     <div class="header-content">
-      <h1>Earn ₹50,000+/Month with Affiliate Marketing <br> & Get Personal Mentorship!</h1>
-      <p>Learn the exact strategies I used to go from zero to earning ₹1.5 lakh/month with LeadsArk</p>
-      <div class="badge">
-        <i class="fas fa-star"></i> Join 12,500+ Successful Students
+      <div class="header-text-content">
+        <h1>Earn ₹50,000+/Month with Affiliate Marketing <br> & Get Personal Mentorship!</h1>
+        <p>Learn the exact strategies I used to go from zero to earning ₹1.5 lakh/month with LeadsArk</p>
+        <div class="badge">
+          <i class="fas fa-star"></i> Join 12,500+ Successful Students
+        </div>
+        <button class="cta-button" onclick="window.location.href='join.html'" style="margin-top: 30px;">
+          <i class="fas fa-lock-open"></i> Get Instant Access Now
+        </button>
       </div>
       <div class="header-video-wrapper">
-        <iframe loading="lazy" src="https://www.youtube.com/embed/oPF_VcyFI5s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/oPF_VcyFI5s?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-      <button class="cta-button" onclick="window.location.href='join.html'" style="margin-top: 20px;">
-        <i class="fas fa-lock-open"></i> Get Instant Access Now
-      </button>
     </div>
   </header>
 
