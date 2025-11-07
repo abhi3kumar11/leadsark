@@ -57,7 +57,7 @@
     .header-content {
       position: relative;
       z-index: 1;
-      max-width: 900px;
+      max-width: 800px; /* Slightly reduced for better text flow */
       margin: 0 auto;
     }
     
@@ -151,7 +151,7 @@
     
     .short-video {
       width: 100%;
-      height: 500px;
+      aspect-ratio: 9 / 16; /* Perfect for vertical shorts */
       border: none;
     }
     
@@ -495,9 +495,6 @@
         font-size: 1.1rem;
       }
       
-      .short-video {
-        height: 400px;
-      }
     }
     
     @media (max-width: 480px) {
@@ -511,10 +508,6 @@
       
       section {
         padding: 60px 15px;
-      }
-      
-      .short-video {
-        height: 300px;
       }
       
       .floating-cta {
@@ -541,7 +534,7 @@
         <i class="fas fa-star"></i> Join 12,500+ Successful Students
       </div>
       <div class="header-video-wrapper">
-        <iframe src="https://www.youtube.com/embed/oPF_VcyFI5s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/oPF_VcyFI5s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <button class="cta-button" onclick="window.location.href='join.html'" style="margin-top: 20px;">
         <i class="fas fa-lock-open"></i> Get Instant Access Now
@@ -564,7 +557,7 @@
     <div class="shorts-container">
       <!-- Short 1 -->
       <div class="short-card">
-        <iframe class="short-video" src="https://www.youtube.com/embed/NQFTxDZCdRc" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe loading="lazy" class="short-video" src="https://www.youtube.com/embed/NQFTxDZCdRc" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div class="short-caption">
           <h3>My First ₹10,000 in 7 Days</h3>
           <p>How I made my first commission with zero experience</p>
@@ -573,7 +566,7 @@
       
       <!-- Short 2 -->
       <div class="short-card">
-        <iframe class="short-video" src="https://www.youtube.com/embed/wl-OCyJ4rXE" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe loading="lazy" class="short-video" src="https://www.youtube.com/embed/wl-OCyJ4rXE" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div class="short-caption">
           <h3>Scaling to ₹50,000/Month</h3>
           <p>The exact strategy I used to scale my earnings</p>
@@ -582,7 +575,7 @@
       
       <!-- Short 3 -->
       <div class="short-card">
-        <iframe class="short-video" src="https://www.youtube.com/embed/A7p7it5EhW4" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe loading="lazy" class="short-video" src="https://www.youtube.com/embed/A7p7it5EhW4" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div class="short-caption">
           <h3>No Technical Skills Needed</h3>
           <p>How beginners can start without any special knowledge</p>
@@ -600,7 +593,7 @@
       
       <!-- Short 4 -->
       <div class="short-card">
-        <iframe class="short-video" src="https://www.youtube.com/embed/TGJeN3x6KTI" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe loading="lazy" class="short-video" src="https://www.youtube.com/embed/TGJeN3x6KTI" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div class="short-caption">
           <h3>Working Just 2 Hours/Day</h3>
           <p>How to earn consistently with minimal time investment</p>
@@ -609,7 +602,7 @@
       
       <!-- Short 5 -->
       <div class="short-card">
-        <iframe class="short-video" src="https://www.youtube.com/embed/cK2QSAU7FHc" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe loading="lazy" class="short-video" src="https://www.youtube.com/embed/cK2QSAU7FHc" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div class="short-caption">
           <h3>From Employee to Entrepreneur</h3>
           <p>My journey from 9-5 job to financial freedom</p>
@@ -618,7 +611,7 @@
       
       <!-- Short 6 -->
       <div class="short-card">
-        <iframe class="short-video" src="https://www.youtube.com/embed/HnXcZrYLXgE" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe loading="lazy" class="short-video" src="https://www.youtube.com/embed/HnXcZrYLXgE" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div class="short-caption">
           <h3>Student Success Stories</h3>
           <p>Real results from people who joined my team</p>
@@ -636,7 +629,7 @@
       
       <!-- Short 7 -->
       <div class="short-card">
-        <iframe class="short-video" src="https://www.youtube.com/embed/yOmXRMENlH0" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe loading="lazy" class="short-video" src="https://www.youtube.com/embed/yOmXRMENlH0" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div class="short-caption">
           <h3>₹1.5 Lakh/Month Breakthrough</h3>
           <p>How I crossed the ₹1.5 lakh/month milestone</p>
@@ -645,7 +638,7 @@
       
       <!-- Short 8 -->
       <div class="short-card">
-        <iframe class="short-video" src="https://www.youtube.com/embed/Vqod7XlLwZI" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe loading="lazy" class="short-video" src="https://www.youtube.com/embed/Vqod7XlLwZI" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div class="short-caption">
           <h3>Zero to ₹25,000 in First Month</h3>
           <p>A student's incredible first-month results</p>
@@ -654,7 +647,7 @@
       
       <!-- Short 9 -->
       <div class="short-card">
-        <iframe class="short-video" src="https://www.youtube.com/embed/4aSpQr6SMvs" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe loading="lazy" class="short-video" src="https://www.youtube.com/embed/4aSpQr6SMvs" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div class="short-caption">
           <h3>Daily Routine of a Top Earner</h3>
           <p>My simple daily process for consistent results</p>
@@ -672,7 +665,7 @@
       
       <!-- Short 10 -->
       <div class="short-card">
-        <iframe class="short-video" src="https://www.youtube.com/embed/BoufqBe3JlE" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe loading="lazy" class="short-video" src="https://www.youtube.com/embed/BoufqBe3JlE" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div class="short-caption">
           <h3>Common Mistakes to Avoid</h3>
           <p>What I wish I knew when I started</p>
@@ -681,7 +674,7 @@
       
       <!-- Short 11 -->
       <div class="short-card">
-        <iframe class="short-video" src="https://www.youtube.com/embed/bHzwrdtm-7w" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe loading="lazy" class="short-video" src="https://www.youtube.com/embed/bHzwrdtm-7w" title="YouTube short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div class="short-caption">
           <h3>Why LeadsArk Works</h3>
           <p>The unique advantage of this system</p>
