@@ -34,23 +34,12 @@
     
     /* Header Styles */
     header {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      background-color: var(--light);
       color: var(--white);
       padding: 80px 20px;
       position: relative;
       overflow: hidden;
-    }
-    
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-      background-size: cover;
-      background-position: bottom;
+      border-bottom: 1px solid #e0e0e0;
     }
     
     .header-content {
@@ -58,7 +47,7 @@
       z-index: 1;
       max-width: 1200px;
       margin: 0 auto;
-      text-align: center;
+      color: var(--dark);
     }
     
     header h1 {
@@ -68,21 +57,39 @@
     }
     
     header p {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       margin-bottom: 25px;
       font-weight: 300;
+      color: #555;
     }
     
-    .badge {
-      display: inline-block;
-      background: rgba(255,255,255,0.2);
-      padding: 8px 20px;
-      border-radius: 30px;
-      font-size: 0.9rem;
-      margin-top: 10px;
-      backdrop-filter: blur(5px);
+    .header-benefits {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
     
+    .header-benefits li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+    }
+    
+    .header-benefits li i {
+      color: var(--primary);
+    }
+    
+    .header-cta-buttons {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
     /* Section Styles */
     section {
       padding: 80px 20px;
@@ -111,7 +118,7 @@
       transform: translateX(-50%);
       width: 80px;
       height: 4px;
-      background: linear-gradient(to right, var(--primary), var(--secondary));
+      background: var(--primary);
       border-radius: 2px;
     }
     
@@ -282,8 +289,8 @@
     }
     
     .cta-button {
-      background: var(--white);
-      color: var(--primary);
+      background: var(--primary);
+      color: var(--white);
       border: none;
       padding: 18px 45px;
       font-size: 1.2rem;
@@ -300,7 +307,13 @@
     .cta-button:hover {
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      background: var(--light);
+      background: #4a77d4;
+    }
+    
+    .whatsapp-link-header {
+      color: #25D366;
+      font-weight: 600;
+      text-decoration: none;
     }
     
     /* Floating CTA */
@@ -472,7 +485,7 @@
     @media (min-width: 992px) {
       .header-content {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1.5fr; /* Give more space to the video */
         gap: 50px;
         align-items: center;
         text-align: left;
@@ -540,18 +553,25 @@
   <!-- Header Section -->
   <header>
     <div class="header-content">
-      <div class="header-text-content">
-        <h1>Earn ₹50,000+/Month with Affiliate Marketing <br> & Get Personal Mentorship!</h1>
-        <p>Learn the exact strategies I used to go from zero to earning ₹1.5 lakh/month with LeadsArk</p>
-        <div class="badge">
-          <i class="fas fa-star"></i> Join 12,500+ Successful Students
+      <div class="header-text">
+        <h1>Earn ₹50,000+/Month with Personal Mentorship</h1>
+        <p>Join 12,500+ students who are achieving financial freedom with LeadsArk. No experience needed.</p>
+        <ul class="header-benefits">
+          <li><i class="fas fa-check-circle"></i> Personal 1-on-1 Guidance</li>
+          <li><i class="fas fa-check-circle"></i> Daily Payouts to Your Bank</li>
+          <li><i class="fas fa-check-circle"></i> Work 2 Hours/Day From Your Phone</li>
+        </ul>
+        <div class="header-cta-buttons">
+          <button class="cta-button" onclick="window.location.href='join.html'">
+            <i class="fas fa-rocket"></i> Start Earning Now
+          </button>
+          <a href="https://chat.whatsapp.com/BrtDgNJW9FVHjPdyVzTFTU?mode=wwt" class="whatsapp-link-header">
+            <i class="fab fa-whatsapp"></i> Join Group
+          </a>
         </div>
-        <button class="cta-button" onclick="window.location.href='join.html'" style="margin-top: 30px;">
-          <i class="fas fa-lock-open"></i> Get Instant Access Now
-        </button>
       </div>
       <div class="header-video-wrapper">
-        <iframe loading="lazy" src="https://www.youtube.com/embed/oPF_VcyFI5s?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/oPF_VcyFI5s?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen  width="600px" height="337.5px"></iframe>
       </div>
     </div>
   </header>
@@ -600,7 +620,7 @@
       <div class="shorts-cta">
         <h3>Ready to Start Earning?</h3>
         <p style="margin-top:10px; margin-bottom: 20px;">Click below to watch the main video and join my team for personal mentorship!</p>
-        <button class="cta-button" onclick="window.location.href='join.html'" style="background: var(--accent); color: white;">
+        <button class="cta-button" onclick="window.location.href='join.html'">
           <i class="fas fa-play-circle"></i> Watch & Join Now
         </button>
       </div>
@@ -636,7 +656,7 @@
       <div class="shorts-cta">
         <h3>Feeling Inspired? Take the Next Step!</h3>
         <p style="margin-top:10px; margin-bottom: 20px;">Your journey to ₹50,000/month is just one click away.</p>
-        <button class="cta-button" onclick="window.location.href='join.html'" style="background: var(--accent); color: white;">
+        <button class="cta-button" onclick="window.location.href='join.html'">
           <i class="fas fa-play-circle"></i> Watch & Join Now
         </button>
       </div>
@@ -672,7 +692,7 @@
       <div class="shorts-cta">
         <h3>Don't Wait! Your Future Starts Now.</h3>
         <p style="margin-top:10px; margin-bottom: 20px;">Get my personal mentorship and start earning this week.</p>
-        <button class="cta-button" onclick="window.location.href='join.html'" style="background: var(--accent); color: white;">
+        <button class="cta-button" onclick="window.location.href='join.html'">
           <i class="fas fa-play-circle"></i> Watch & Join Now
         </button>
       </div>
